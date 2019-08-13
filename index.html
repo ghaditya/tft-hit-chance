@@ -1,0 +1,260 @@
+<html>
+
+  <style>
+
+    body {
+      background-color: black;
+    }
+
+    .IconSelectable {
+      width: 50px;
+      height: 50px;
+      filter: grayscale(100%);
+      cursor: pointer;
+    }
+
+    .IconSelectable:hover {
+      transform: scale(1.20, 1.20);
+      filter: grayscale(0%);
+      transition-duration: .25s;
+    }
+
+    .leftcontainer {
+      text-align: center;
+      width: 66vw;
+    }
+
+    .title {
+      color: white;
+      text-align: center;
+      font-family: 'Roboto', sans-serif;
+      font-style: normal;
+      text-transform: uppercase;
+      letter-spacing: 3px
+    }
+
+    .costlabel {
+      font-size: 20px;
+    }
+
+    .iconborder {
+      border-color: #ae914b;
+      border-style: solid;
+      border-width: 1px;
+      display: inline-block;
+      padding: 5px;
+      margin-top: 0px;
+      margin-bottom: 10px;
+    }
+    
+    .rightcolumn {
+      width: 33vw;
+      position: absolute;
+      left: 66vw;
+      text-align: center;
+      top: 10vh;
+    }
+
+    #separator {
+      border-left: 2px ridge #ae914b;
+      height: 90vh;
+      position: absolute;
+      left: 66vw;
+      top: 8vh;
+    }
+
+  </style>
+
+  <head>
+  </head>
+
+  <body>
+
+    <h1 class="title" style="font-size: 30px;">TFT Hit Chance Calculator</h1>
+    <div id="t1container" class="leftcontainer">
+      <p class="title costlabel">1 Cost Units</p>
+      <p class="iconborder">
+      <img src="Icons\1 Cost\Darius-Icon.png" class="IconSelectable t1" onclick="selectUnit(this, t1)">
+      <img src="Icons\1 Cost\Elise-Icon.png" class="IconSelectable t1" onclick="selectUnit(this, t1)">
+      <img src="Icons\1 Cost\Fiora-Icon.png" class="IconSelectable t1" onclick="selectUnit(this, t1)">
+      <img src="Icons\1 Cost\Garen-Icon.png" class="IconSelectable t1" onclick="selectUnit(this, t1)">
+      <img src="Icons\1 Cost\Graves-Icon.png" class="IconSelectable t1" onclick="selectUnit(this, t1)">
+      <img src="Icons\1 Cost\Kassadin-Icon.png" class="IconSelectable t1" onclick="selectUnit(this, t1)">
+      <img src="Icons\1 Cost\Kha'Zix-Icon.png" class="IconSelectable t1" onclick="selectUnit(this, t1)">
+      <img src="Icons\1 Cost\Mordekaiser-Icon.png" class="IconSelectable t1" onclick="selectUnit(this, t1)">
+      <img src="Icons\1 Cost\Nidalee-Icon.png" class="IconSelectable t1" onclick="selectUnit(this, t1)">
+      <img src="Icons\1 Cost\Tristana-Icon.png" class="IconSelectable t1" onclick="selectUnit(this, t1)">
+      <img src="Icons\1 Cost\Vayne-Icon.png" class="IconSelectable t1" onclick="selectUnit(this, t1)">
+      <img src="Icons\1 Cost\Warwick-Icon.png" class="IconSelectable t1" onclick="selectUnit(this, t1)">
+</p>
+    </div>
+
+    <div id="t2container" class="leftcontainer">
+      <p class="title costlabel">2 Cost Units</p>
+      <p class="iconborder">
+      <img src="Icons\2 Cost\Ahri-Icon.png" class="IconSelectable t2" onclick="selectUnit(this, t2)">
+      <img src="Icons\2 Cost\Blitzcrank-Icon.png" class="IconSelectable t2" onclick="selectUnit(this, t2)">
+      <img src="Icons\2 Cost\Braum-Icon.png" class="IconSelectable t2" onclick="selectUnit(this, t2)">
+      <img src="Icons\2 Cost\Lissandra-Icon.png" class="IconSelectable t2" onclick="selectUnit(this, t2)">
+      <img src="Icons\2 Cost\Lucian-Icon.png" class="IconSelectable t2" onclick="selectUnit(this, t2)">
+      <img src="Icons\2 Cost\Lulu-Icon.png" class="IconSelectable t2" onclick="selectUnit(this, t2)">
+      <img src="Icons\2 Cost\Pyke-Icon.png" class="IconSelectable t2" onclick="selectUnit(this, t2)">
+      <img src="Icons\2 Cost\Rek'Sai-Icon.png" class="IconSelectable t2" onclick="selectUnit(this, t2)">
+      <img src="Icons\2 Cost\Shen-Icon.png" class="IconSelectable t2" onclick="selectUnit(this, t2)">
+      <img src="Icons\2 Cost\Twisted-Fate-Icon.png" class="IconSelectable t2" onclick="selectUnit(this, t2)">
+      <img src="Icons\2 Cost\Varus-Icon.png" class="IconSelectable t2" onclick="selectUnit(this, t2)">
+      <img src="Icons\2 Cost\Zed-Icon.png" class="IconSelectable t2" onclick="selectUnit(this, t2)">
+</p>
+    </div>
+
+    <div id="t3container" class="leftcontainer">
+      <p class="title costlabel">3 Cost Units</p>
+      <p class="iconborder">
+      <img src="Icons\3 Cost\Aatrox-Icon.png" class="IconSelectable t3" onclick="selectUnit(this, t3)">
+      <img src="Icons\3 Cost\Ashe-Icon.png" class="IconSelectable t3" onclick="selectUnit(this, t3)">
+      <img src="Icons\3 Cost\Evelynn-Icon.png" class="IconSelectable t3" onclick="selectUnit(this, t3)">
+      <img src="Icons\3 Cost\Gangplank-Icon.png" class="IconSelectable t3" onclick="selectUnit(this, t3)">
+      <img src="Icons\3 Cost\Katarina-Icon.png" class="IconSelectable t3" onclick="selectUnit(this, t3)">
+      <img src="Icons\3 Cost\Kennen-Icon.png" class="IconSelectable t3" onclick="selectUnit(this, t3)">
+      <img src="Icons\3 Cost\Morgana-Icon.png" class="IconSelectable t3" onclick="selectUnit(this, t3)">
+      <img src="Icons\3 Cost\Poppy-Icon.png" class="IconSelectable t3" onclick="selectUnit(this, t3)">
+      <img src="Icons\3 Cost\Rengar-Icon.png" class="IconSelectable t3" onclick="selectUnit(this, t3)">
+      <img src="Icons\3 Cost\Shyvana-Icon.png" class="IconSelectable t3" onclick="selectUnit(this, t3)">
+      <img src="Icons\3 Cost\Veigar-Icon.png" class="IconSelectable t3" onclick="selectUnit(this, t3)">
+      <img src="Icons\3 Cost\Volibear-Icon.png" class="IconSelectable t3" onclick="selectUnit(this, t3)">
+</p>
+    </div>
+
+    <div id="t4container" class="leftcontainer">
+      <p class="title costlabel">4 Cost Units</p>
+      <p class="iconborder">
+      <img src="Icons\4 Cost\Akali-Icon.png" class="IconSelectable t4" onclick="selectUnit(this, t4)">
+      <img src="Icons\4 Cost\Aurelion-Sol-Icon.png" class="IconSelectable t4" onclick="selectUnit(this, t4)">
+      <img src="Icons\4 Cost\Brand-Icon.png" class="IconSelectable t4" onclick="selectUnit(this, t4)">
+      <img src="Icons\4 Cost\Cho'Gath-Icon.png" class="IconSelectable t4" onclick="selectUnit(this, t4)">
+      <img src="Icons\4 Cost\Draven-Icon.png" class="IconSelectable t4" onclick="selectUnit(this, t4)">
+      <img src="Icons\4 Cost\Gnar-Icon.png" class="IconSelectable t4" onclick="selectUnit(this, t4)">
+      <img src="Icons\4 Cost\Kindred-Icon.png" class="IconSelectable t4" onclick="selectUnit(this, t4)">
+      <img src="Icons\4 Cost\Leona-Icon.png" class="IconSelectable t4" onclick="selectUnit(this, t4)">
+      <img src="Icons\4 Cost\Sejuani-Icon.png" class="IconSelectable t4" onclick="selectUnit(this, t4)">
+</p>
+    </div>
+
+    <div id="t5container" class="leftcontainer">
+      <p class="title costlabel">5 Cost Units</p>
+      <p class="iconborder">
+      <img src="Icons\5 Cost\Yasuo-Icon.png" class="IconSelectable t5" onclick="selectUnit(this, t5)">
+      <img src="Icons\5 Cost\Karthus-Icon.png" class="IconSelectable t5" onclick="selectUnit(this, t5)">
+      <img src="Icons\5 Cost\Anivia-Icon.png" class="IconSelectable t5" onclick="selectUnit(this, t5)">
+      <img src="Icons\5 Cost\Kayle-Icon.png" class="IconSelectable t5" onclick="selectUnit(this, t5)">
+      <img src="Icons\5 Cost\Miss-Fortune-Icon.png" class="IconSelectable t5" onclick="selectUnit(this, t5)">
+      <img src="Icons\5 Cost\Swain-Icon.png" class="IconSelectable t5" onclick="selectUnit(this, t5)">
+</p>
+    </div>
+
+    <div id="separator"></div>
+
+    <div class="rightcolumn">
+      <p class="title" style="font-size: 16px; display: inline-block">Your Level:</p>
+      <select id="level" onchange="setLevel()" style="width: auto">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>6</option>
+        <option>7</option>
+        <option>8</option>
+        <option>9</option>
+      </select>
+    <div style="color:white; font-size: 100px; font-family: 'copse', sans-serif; padding-top: 22.5vh" id="output">0%</div>
+    <div class="title">Chance to Hit</div>
+    </div>
+
+  </body>
+
+  <script>
+    
+    var level1 = {t1:1, t2:0, t3:0, t4:0, t5:0};
+    var level2 = {t1:1, t2:0, t3:0, t4:0, t5:0};
+    var level3 = {t1:0.65, t2:0.3, t3:0.05, t4:0, t5:0};
+    var level4 = {t1:0.5, t2:0.35, t3:0.15, t4:0, t5:0};
+    var level5 = {t1:0.37, t2:0.35, t3:0.25, t4:0.03, t5:0};
+    var level6 = {t1:0.245, t2:0.35, t3:0.3, t4:0.1, t5:0.005};
+    var level7 = {t1:0.2, t2:0.3, t3:0.33, t4:0.15, t5:0.02};
+    var level8 = {t1:0.15, t2:0.25, t3:0.35, t4:0.2, t5:0.05};
+    var level9 = {t1:0.1, t2:0.15, t3:0.35, t4:0.3, t5:0.1};
+
+    var t1 = {types:12, total:39, hits: 0};
+    var t2 = {types:12, total:26, hits: 0};
+    var t3 = {types:12, total:21, hits: 0};
+    var t4 = {types:9, total:13, hits: 0};
+    var t5 = {types:6, total:10, hits: 0};
+
+    var hitChance = 0;
+
+    function selectUnit(a, b) {
+      if (a.style.filter == "grayscale(0%)") {
+        a.setAttribute("style", "");
+        b.hits -= 1;
+      } else {
+        a.setAttribute("style", "filter: grayscale(0%); border-color: #ae914b; border-style: solid; border-width: 1px");
+        b.hits += 1;
+      }
+
+      setLevel();
+
+    }
+    
+    function setLevel() {
+
+      switch(parseInt(document.getElementById("level").value)) {
+        
+        case 1:
+          calculateOdds(level1);
+          break;
+
+        case 2:
+          calculateOdds(level2);
+          break;
+
+        case 3:
+          calculateOdds(level3);
+          break;
+
+        case 4:
+          calculateOdds(level4);
+          break;
+
+        case 5:
+          calculateOdds(level5);
+          break;
+
+        case 6:
+          calculateOdds(level6);
+          break;
+
+        case 7:
+          calculateOdds(level7);
+          break;
+
+        case 8:
+          calculateOdds(level8);
+          break;
+
+        case 9:
+          calculateOdds(level9);
+          break;
+      }
+    }
+
+    function calculateOdds(level) {
+      
+      hitChance = Math.round((1-(((1-(level.t1 * (t1.hits/t1.types)))**5)))*1000)/10 + Math.round((1-(((1-(level.t2 * (t2.hits/t2.types)))**5)))*1000)/10 + Math.round((1-(((1-(level.t3 * (t3.hits/t3.types)))**5)))*1000)/10 + Math.round((1-(((1-(level.t4 * (t4.hits/t4.types)))**5)))*1000)/10 + Math.round((1-(((1-(level.t5 * (t5.hits/t5.types)))**5)))*1000)/10;
+      
+      document.getElementById("output").innerHTML = hitChance + "%";
+    }
+    
+  </script>
+
+</html>
