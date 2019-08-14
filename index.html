@@ -251,8 +251,8 @@
 
     function calculateOdds(level) {
       
-      hitChance = Math.round((1-(((1-(level.t1 * (t1.hits/t1.types)))**5)))*1000)/10 + Math.round((1-(((1-(level.t2 * (t2.hits/t2.types)))**5)))*1000)/10 + Math.round((1-(((1-(level.t3 * (t3.hits/t3.types)))**5)))*1000)/10 + Math.round((1-(((1-(level.t4 * (t4.hits/t4.types)))**5)))*1000)/10 + Math.round((1-(((1-(level.t5 * (t5.hits/t5.types)))**5)))*1000)/10;
-      
+      hitChance = Math.round((1-((1-((level.t1 * (t1.hits/t1.types)) + (level.t2 * (t2.hits/t2.types)) + (level.t3 * (t3.hits/t3.types)) + (level.t4 * (t4.hits/t4.types)) + (level.t4 * (t4.hits/t4.types))))**5))*1000)/10;
+
       document.getElementById("output").innerHTML = hitChance + "%";
     }
     
