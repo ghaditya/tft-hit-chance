@@ -87,6 +87,7 @@
         <img src="Icons\1 Cost\Tristana-Icon.png" class="IconSelectable t1" onclick="selectUnit(this, t1)">
         <img src="Icons\1 Cost\Vayne-Icon.png" class="IconSelectable t1" onclick="selectUnit(this, t1)">
         <img src="Icons\1 Cost\Warwick-Icon.png" class="IconSelectable t1" onclick="selectUnit(this, t1)">
+        <img src="Icons\1 Cost\Camille-Icon.png" class="IconSelectable t1" onclick="selectUnit(this, t1)">
       </p>
     </div>
 
@@ -105,6 +106,7 @@
         <img src="Icons\2 Cost\Twisted-Fate-Icon.png" class="IconSelectable t2" onclick="selectUnit(this, t2)">
         <img src="Icons\2 Cost\Varus-Icon.png" class="IconSelectable t2" onclick="selectUnit(this, t2)">
         <img src="Icons\2 Cost\Zed-Icon.png" class="IconSelectable t2" onclick="selectUnit(this, t2)">
+        <img src="Icons\2 Cost\Jayce-Icon.png" class="IconSelectable t2" onclick="selectUnit(this, t2)">
       </p>
     </div>
 
@@ -123,6 +125,7 @@
         <img src="Icons\3 Cost\Shyvana-Icon.png" class="IconSelectable t3" onclick="selectUnit(this, t3)">
         <img src="Icons\3 Cost\Veigar-Icon.png" class="IconSelectable t3" onclick="selectUnit(this, t3)">
         <img src="Icons\3 Cost\Volibear-Icon.png" class="IconSelectable t3" onclick="selectUnit(this, t3)">
+        <img src="Icons\3 Cost\Vi-Icon.png" class="IconSelectable t3" onclick="selectUnit(this, t3)">
       </p>
     </div>
 
@@ -138,6 +141,7 @@
         <img src="Icons\4 Cost\Kindred-Icon.png" class="IconSelectable t4" onclick="selectUnit(this, t4)">
         <img src="Icons\4 Cost\Leona-Icon.png" class="IconSelectable t4" onclick="selectUnit(this, t4)">
         <img src="Icons\4 Cost\Sejuani-Icon.png" class="IconSelectable t4" onclick="selectUnit(this, t4)">
+        <img src="Icons\4 Cost\Jinx-Icon.png" class="IconSelectable t4" onclick="selectUnit(this, t4)">
       </p>
     </div>
 
@@ -186,10 +190,10 @@
     var level8 = {t1:0.15, t2:0.25, t3:0.35, t4:0.2, t5:0.05};
     var level9 = {t1:0.1, t2:0.15, t3:0.35, t4:0.3, t5:0.1};
 
-    var t1 = {types:12, total:39, hits: 0};
-    var t2 = {types:12, total:26, hits: 0};
-    var t3 = {types:12, total:21, hits: 0};
-    var t4 = {types:9, total:13, hits: 0};
+    var t1 = {types:13, total:39, hits: 0};
+    var t2 = {types:13, total:26, hits: 0};
+    var t3 = {types:13, total:21, hits: 0};
+    var t4 = {types:10, total:13, hits: 0};
     var t5 = {types:6, total:10, hits: 0};
 
     var hitChance = 0;
@@ -251,7 +255,7 @@
 
     function calculateOdds(level) {
       
-      hitChance = Math.round((1-((1-((level.t1 * (t1.hits/t1.types)) + (level.t2 * (t2.hits/t2.types)) + (level.t3 * (t3.hits/t3.types)) + (level.t4 * (t4.hits/t4.types)) + (level.t4 * (t4.hits/t4.types))))**5))*1000)/10;
+      hitChance = Math.round((1-((1-((level.t1 * (t1.hits/t1.types)) + (level.t2 * (t2.hits/t2.types)) + (level.t3 * (t3.hits/t3.types)) + (level.t4 * (t4.hits/t4.types)) + (level.t5 * (t5.hits/t5.types))))**5))*1000)/10;
 
       document.getElementById("output").innerHTML = hitChance + "%";
     }
