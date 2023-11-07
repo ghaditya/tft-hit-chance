@@ -1,3 +1,4 @@
+<!doctype html>
 <html>
 
   <style>
@@ -182,23 +183,33 @@
 
   <script>
     
-    var level1 = {t1:1, t2:0, t3:0, t4:0, t5:0};
-    var level2 = {t1:1, t2:0, t3:0, t4:0, t5:0};
-    var level3 = {t1:0.65, t2:0.3, t3:0.05, t4:0, t5:0};
-    var level4 = {t1:0.5, t2:0.35, t3:0.15, t4:0, t5:0};
-    var level5 = {t1:0.37, t2:0.35, t3:0.25, t4:0.03, t5:0};
-    var level6 = {t1:0.245, t2:0.35, t3:0.3, t4:0.1, t5:0.005};
-    var level7 = {t1:0.2, t2:0.3, t3:0.33, t4:0.15, t5:0.02};
-    var level8 = {t1:0.15, t2:0.25, t3:0.35, t4:0.2, t5:0.05};
-    var level9 = {t1:0.1, t2:0.15, t3:0.35, t4:0.3, t5:0.1};
+    const level1 = {t1:1, t2:0, t3:0, t4:0, t5:0};
+    const level2 = {t1:1, t2:0, t3:0, t4:0, t5:0};
+    const level3 = {t1:0.65, t2:0.3, t3:0.05, t4:0, t5:0};
+    const level4 = {t1:0.5, t2:0.35, t3:0.15, t4:0, t5:0};
+    const level5 = {t1:0.37, t2:0.35, t3:0.25, t4:0.03, t5:0};
+    const level6 = {t1:0.245, t2:0.35, t3:0.3, t4:0.1, t5:0.005};
+    const level7 = {t1:0.2, t2:0.3, t3:0.33, t4:0.15, t5:0.02};
+    const level8 = {t1:0.15, t2:0.25, t3:0.35, t4:0.2, t5:0.05};
+    const level9 = {t1:0.1, t2:0.15, t3:0.35, t4:0.3, t5:0.1};
+
+    const level_values = [
+      level1,
+      level2,
+      level3,
+      level4,
+      level5,
+      level6,
+      level7,
+      level8,
+      level9
+    ];
 
     var t1 = {types:13, total:39, hits: 0};
     var t2 = {types:13, total:26, hits: 0};
     var t3 = {types:13, total:21, hits: 0};
     var t4 = {types:10, total:13, hits: 0};
     var t5 = {types:8, total:10, hits: 0};
-
-    var hitChance = 0;
 
     function selectUnit(a, b) {
       if (a.style.filter == "grayscale(0%)") {
@@ -208,57 +219,16 @@
         a.setAttribute("style", "filter: grayscale(0%); border-color: #ae914b; border-style: solid; border-width: 1px");
         b.hits += 1;
       }
-
       setLevel();
-
     }
-    
+
     function setLevel() {
-
-      switch(parseInt(document.getElementById("level").value)) {
-        
-        case 1:
-          calculateOdds(level1);
-          break;
-
-        case 2:
-          calculateOdds(level2);
-          break;
-
-        case 3:
-          calculateOdds(level3);
-          break;
-
-        case 4:
-          calculateOdds(level4);
-          break;
-
-        case 5:
-          calculateOdds(level5);
-          break;
-
-        case 6:
-          calculateOdds(level6);
-          break;
-
-        case 7:
-          calculateOdds(level7);
-          break;
-
-        case 8:
-          calculateOdds(level8);
-          break;
-
-        case 9:
-          calculateOdds(level9);
-          break;
-      }
+      const level = parseInt(document.getElementById("level").value) - 1;
+      calculateOdds(level_values[level]);
     }
 
     function calculateOdds(level) {
-      
-      hitChance = Math.round((1-((1-((level.t1 * (t1.hits/t1.types)) + (level.t2 * (t2.hits/t2.types)) + (level.t3 * (t3.hits/t3.types)) + (level.t4 * (t4.hits/t4.types)) + (level.t5 * (t5.hits/t5.types))))**5))*1000)/10;
-
+      const hitChance = Math.round((1-((1-((level.t1 * (t1.hits/t1.types)) + (level.t2 * (t2.hits/t2.types)) + (level.t3 * (t3.hits/t3.types)) + (level.t4 * (t4.hits/t4.types)) + (level.t5 * (t5.hits/t5.types))))**5))*1000)/10;
       document.getElementById("output").innerHTML = hitChance + "%";
     }
     
