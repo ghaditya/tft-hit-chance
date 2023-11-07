@@ -56,6 +56,15 @@
       top: 10vh;
     }
 
+    .visually-hidden {
+      height: 1px;
+      width: 1px;
+      margin: -1px;
+      overflow: hidden;
+      position: absolute;
+      padding: 0;
+    }
+
     #separator {
       border-left: 2px ridge #ae914b;
       height: 90vh;
@@ -74,96 +83,97 @@
 
     <h1 class="title" style="font-size: 30px;">TFT Hit Chance Calculator</h1>
     <div id="t1container" class="leftcontainer">
-      <p class="title costlabel">1 Cost Units</p>
-      <p class="iconborder">
-        <img src="Icons\1 Cost\Darius-Icon.png" class="IconSelectable t1" onclick="selectUnit(this, t1)">
-        <img src="Icons\1 Cost\Elise-Icon.png" class="IconSelectable t1" onclick="selectUnit(this, t1)">
-        <img src="Icons\1 Cost\Fiora-Icon.png" class="IconSelectable t1" onclick="selectUnit(this, t1)">
-        <img src="Icons\1 Cost\Garen-Icon.png" class="IconSelectable t1" onclick="selectUnit(this, t1)">
-        <img src="Icons\1 Cost\Graves-Icon.png" class="IconSelectable t1" onclick="selectUnit(this, t1)">
-        <img src="Icons\1 Cost\Kassadin-Icon.png" class="IconSelectable t1" onclick="selectUnit(this, t1)">
-        <img src="Icons\1 Cost\Kha'Zix-Icon.png" class="IconSelectable t1" onclick="selectUnit(this, t1)">
-        <img src="Icons\1 Cost\Mordekaiser-Icon.png" class="IconSelectable t1" onclick="selectUnit(this, t1)">
-        <img src="Icons\1 Cost\Nidalee-Icon.png" class="IconSelectable t1" onclick="selectUnit(this, t1)">
-        <img src="Icons\1 Cost\Tristana-Icon.png" class="IconSelectable t1" onclick="selectUnit(this, t1)">
-        <img src="Icons\1 Cost\Vayne-Icon.png" class="IconSelectable t1" onclick="selectUnit(this, t1)">
-        <img src="Icons\1 Cost\Warwick-Icon.png" class="IconSelectable t1" onclick="selectUnit(this, t1)">
-        <img src="Icons\1 Cost\Camille-Icon.png" class="IconSelectable t1" onclick="selectUnit(this, t1)">
-      </p>
+      <h2 class="title costlabel">1 Cost Units</h2>
+      <div class="iconborder">
+        <input type="image" src="Icons/1 Cost/Darius-Icon.png" alt="Select Darius" class="IconSelectable t1" onclick="selectUnit(this, t1)"></input>
+        <input type="image" src="Icons/1 Cost/Elise-Icon.png" alt="Select Elise" class="IconSelectable t1" onclick="selectUnit(this, t1)"></input>
+        <input type="image" src="Icons/1 Cost/Fiora-Icon.png" alt="Select Fiora" class="IconSelectable t1" onclick="selectUnit(this, t1)"></input>
+        <input type="image" src="Icons/1 Cost/Garen-Icon.png" alt="Select Garen" class="IconSelectable t1" onclick="selectUnit(this, t1)"></input>
+        <input type="image" src="Icons/1 Cost/Graves-Icon.png" alt="Select Graves" class="IconSelectable t1" onclick="selectUnit(this, t1)"></input>
+        <input type="image" src="Icons/1 Cost/Kassadin-Icon.png" alt="Select Kassadin" class="IconSelectable t1" onclick="selectUnit(this, t1)"></input>
+        <input type="image" src="Icons/1 Cost/Kha'Zix-Icon.png" alt="Select Kha'Zix" class="IconSelectable t1" onclick="selectUnit(this, t1)"></input>
+        <input type="image" src="Icons/1 Cost/Mordekaiser-Icon.png" alt="Select Mordekaiser" class="IconSelectable t1" onclick="selectUnit(this, t1)"></input>
+        <input type="image" src="Icons/1 Cost/Nidalee-Icon.png" alt="Select Nidalee" class="IconSelectable t1" onclick="selectUnit(this, t1)"></input>
+        <input type="image" src="Icons/1 Cost/Tristana-Icon.png" alt="Select Tristana" class="IconSelectable t1" onclick="selectUnit(this, t1)"></input>
+        <input type="image" src="Icons/1 Cost/Vayne-Icon.png" alt="Select Vayne" class="IconSelectable t1" onclick="selectUnit(this, t1)"></input>
+        <input type="image" src="Icons/1 Cost/Warwick-Icon.png" alt="Select Warwick" class="IconSelectable t1" onclick="selectUnit(this, t1)"></input>
+        <input type="image" src="Icons/1 Cost/Camille-Icon.png" alt="Select Camille" class="IconSelectable t1" onclick="selectUnit(this, t1)"></input>
+        </div>
     </div>
 
     <div id="t2container" class="leftcontainer">
-      <p class="title costlabel">2 Cost Units</p>
-      <p class="iconborder">
-        <img src="Icons\2 Cost\Ahri-Icon.png" class="IconSelectable t2" onclick="selectUnit(this, t2)">
-        <img src="Icons\2 Cost\Blitzcrank-Icon.png" class="IconSelectable t2" onclick="selectUnit(this, t2)">
-        <img src="Icons\2 Cost\Braum-Icon.png" class="IconSelectable t2" onclick="selectUnit(this, t2)">
-        <img src="Icons\2 Cost\Lissandra-Icon.png" class="IconSelectable t2" onclick="selectUnit(this, t2)">
-        <img src="Icons\2 Cost\Lucian-Icon.png" class="IconSelectable t2" onclick="selectUnit(this, t2)">
-        <img src="Icons\2 Cost\Lulu-Icon.png" class="IconSelectable t2" onclick="selectUnit(this, t2)">
-        <img src="Icons\2 Cost\Pyke-Icon.png" class="IconSelectable t2" onclick="selectUnit(this, t2)">
-        <img src="Icons\2 Cost\Rek'Sai-Icon.png" class="IconSelectable t2" onclick="selectUnit(this, t2)">
-        <img src="Icons\2 Cost\Shen-Icon.png" class="IconSelectable t2" onclick="selectUnit(this, t2)">
-        <img src="Icons\2 Cost\Twisted-Fate-Icon.png" class="IconSelectable t2" onclick="selectUnit(this, t2)">
-        <img src="Icons\2 Cost\Varus-Icon.png" class="IconSelectable t2" onclick="selectUnit(this, t2)">
-        <img src="Icons\2 Cost\Zed-Icon.png" class="IconSelectable t2" onclick="selectUnit(this, t2)">
-        <img src="Icons\2 Cost\Jayce-Icon.png" class="IconSelectable t2" onclick="selectUnit(this, t2)">
-      </p>
+      <h2 class="title costlabel">2 Cost Units</h2>
+      <div class="iconborder">
+        <input type="image" src="Icons/2 Cost/Ahri-Icon.png" alt="Select Ahri" class="IconSelectable t2" onclick="selectUnit(this, t2)"></input>
+        <input type="image" src="Icons/2 Cost/Blitzcrank-Icon.png" alt="Select Blitzcrank" class="IconSelectable t2" onclick="selectUnit(this, t2)"></input>
+        <input type="image" src="Icons/2 Cost/Braum-Icon.png" alt="Select Braum" class="IconSelectable t2" onclick="selectUnit(this, t2)"></input>
+        <input type="image" src="Icons/2 Cost/Lissandra-Icon.png" alt="Select Lissandra" class="IconSelectable t2" onclick="selectUnit(this, t2)"></input>
+        <input type="image" src="Icons/2 Cost/Lucian-Icon.png" alt="Select Lucian" class="IconSelectable t2" onclick="selectUnit(this, t2)"></input>
+        <input type="image" src="Icons/2 Cost/Lulu-Icon.png" alt="Select Lulu" class="IconSelectable t2" onclick="selectUnit(this, t2)"></input>
+        <input type="image" src="Icons/2 Cost/Pyke-Icon.png" alt="Select Pyke" class="IconSelectable t2" onclick="selectUnit(this, t2)"></input>
+        <input type="image" src="Icons/2 Cost/Rek'Sai-Icon.png" alt="Select Rek'Sai" class="IconSelectable t2" onclick="selectUnit(this, t2)"></input>
+        <input type="image" src="Icons/2 Cost/Shen-Icon.png" alt="Select Shen" class="IconSelectable t2" onclick="selectUnit(this, t2)"></input>
+        <input type="image" src="Icons/2 Cost/Twisted-Fate-Icon.png" alt="Select Twisted Fate" class="IconSelectable t2" onclick="selectUnit(this, t2)"></input>
+        <input type="image" src="Icons/2 Cost/Varus-Icon.png" alt="Select Varus" class="IconSelectable t2" onclick="selectUnit(this, t2)"></input>
+        <input type="image" src="Icons/2 Cost/Zed-Icon.png" alt="Select Zed" class="IconSelectable t2" onclick="selectUnit(this, t2)"></input>
+        <input type="image" src="Icons/2 Cost/Jayce-Icon.png" alt="Select Jayce" class="IconSelectable t2" onclick="selectUnit(this, t2)"></input>
+      </div>
     </div>
 
     <div id="t3container" class="leftcontainer">
-      <p class="title costlabel">3 Cost Units</p>
-      <p class="iconborder">
-        <img src="Icons\3 Cost\Aatrox-Icon.png" class="IconSelectable t3" onclick="selectUnit(this, t3)">
-        <img src="Icons\3 Cost\Ashe-Icon.png" class="IconSelectable t3" onclick="selectUnit(this, t3)">
-        <img src="Icons\3 Cost\Evelynn-Icon.png" class="IconSelectable t3" onclick="selectUnit(this, t3)">
-        <img src="Icons\3 Cost\Gangplank-Icon.png" class="IconSelectable t3" onclick="selectUnit(this, t3)">
-        <img src="Icons\3 Cost\Katarina-Icon.png" class="IconSelectable t3" onclick="selectUnit(this, t3)">
-        <img src="Icons\3 Cost\Kennen-Icon.png" class="IconSelectable t3" onclick="selectUnit(this, t3)">
-        <img src="Icons\3 Cost\Morgana-Icon.png" class="IconSelectable t3" onclick="selectUnit(this, t3)">
-        <img src="Icons\3 Cost\Poppy-Icon.png" class="IconSelectable t3" onclick="selectUnit(this, t3)">
-        <img src="Icons\3 Cost\Rengar-Icon.png" class="IconSelectable t3" onclick="selectUnit(this, t3)">
-        <img src="Icons\3 Cost\Shyvana-Icon.png" class="IconSelectable t3" onclick="selectUnit(this, t3)">
-        <img src="Icons\3 Cost\Veigar-Icon.png" class="IconSelectable t3" onclick="selectUnit(this, t3)">
-        <img src="Icons\3 Cost\Volibear-Icon.png" class="IconSelectable t3" onclick="selectUnit(this, t3)">
-        <img src="Icons\3 Cost\Vi-Icon.png" class="IconSelectable t3" onclick="selectUnit(this, t3)">
-      </p>
+      <h2 class="title costlabel">3 Cost Units</h2>
+      <div class="iconborder">
+        <input type="image" src="Icons/3 Cost/Aatrox-Icon.png" alt="Select Aatrox" class="IconSelectable t3" onclick="selectUnit(this, t3)"></input>
+        <input type="image" src="Icons/3 Cost/Ashe-Icon.png" alt="Select Ashe" class="IconSelectable t3" onclick="selectUnit(this, t3)"></input>
+        <input type="image" src="Icons/3 Cost/Evelynn-Icon.png" alt="Select Evelynn" class="IconSelectable t3" onclick="selectUnit(this, t3)"></input>
+        <input type="image" src="Icons/3 Cost/Gangplank-Icon.png" alt="Select Gangplank" class="IconSelectable t3" onclick="selectUnit(this, t3)"></input>
+        <input type="image" src="Icons/3 Cost/Katarina-Icon.png" alt="Select Katarina" class="IconSelectable t3" onclick="selectUnit(this, t3)"></input>
+        <input type="image" src="Icons/3 Cost/Kennen-Icon.png" alt="Select Kennen" class="IconSelectable t3" onclick="selectUnit(this, t3)"></input>
+        <input type="image" src="Icons/3 Cost/Morgana-Icon.png" alt="Select Morgana" class="IconSelectable t3" onclick="selectUnit(this, t3)"></input>
+        <input type="image" src="Icons/3 Cost/Poppy-Icon.png" alt="Select Poppy" class="IconSelectable t3" onclick="selectUnit(this, t3)"></input>
+        <input type="image" src="Icons/3 Cost/Rengar-Icon.png" alt="Select Rengar" class="IconSelectable t3" onclick="selectUnit(this, t3)"></input>
+        <input type="image" src="Icons/3 Cost/Shyvana-Icon.png" alt="Select Shyvana" class="IconSelectable t3" onclick="selectUnit(this, t3)"></input>
+        <input type="image" src="Icons/3 Cost/Veigar-Icon.png" alt="Select Veigar" class="IconSelectable t3" onclick="selectUnit(this, t3)"></input>
+        <input type="image" src="Icons/3 Cost/Volibear-Icon.png" alt="Select Volibear" class="IconSelectable t3" onclick="selectUnit(this, t3)"></input>
+        <input type="image" src="Icons/3 Cost/Vi-Icon.png" alt="Select Vi" class="IconSelectable t3" onclick="selectUnit(this, t3)"></input>
+      </div>
     </div>
 
     <div id="t4container" class="leftcontainer">
-      <p class="title costlabel">4 Cost Units</p>
-      <p class="iconborder">
-        <img src="Icons\4 Cost\Akali-Icon.png" class="IconSelectable t4" onclick="selectUnit(this, t4)">
-        <img src="Icons\4 Cost\Aurelion-Sol-Icon.png" class="IconSelectable t4" onclick="selectUnit(this, t4)">
-        <img src="Icons\4 Cost\Brand-Icon.png" class="IconSelectable t4" onclick="selectUnit(this, t4)">
-        <img src="Icons\4 Cost\Cho'Gath-Icon.png" class="IconSelectable t4" onclick="selectUnit(this, t4)">
-        <img src="Icons\4 Cost\Draven-Icon.png" class="IconSelectable t4" onclick="selectUnit(this, t4)">
-        <img src="Icons\4 Cost\Gnar-Icon.png" class="IconSelectable t4" onclick="selectUnit(this, t4)">
-        <img src="Icons\4 Cost\Kindred-Icon.png" class="IconSelectable t4" onclick="selectUnit(this, t4)">
-        <img src="Icons\4 Cost\Leona-Icon.png" class="IconSelectable t4" onclick="selectUnit(this, t4)">
-        <img src="Icons\4 Cost\Sejuani-Icon.png" class="IconSelectable t4" onclick="selectUnit(this, t4)">
-        <img src="Icons\4 Cost\Jinx-Icon.png" class="IconSelectable t4" onclick="selectUnit(this, t4)">
-      </p>
+      <h2 class="title costlabel">4 Cost Units</h2>
+      <div class="iconborder">
+        <input type="image" src="Icons/4 Cost/Akali-Icon.png" alt="Select Akali" class="IconSelectable t4" onclick="selectUnit(this, t4)"></input>
+        <input type="image" src="Icons/4 Cost/Aurelion-Sol-Icon.png" alt="Select Aurelion Sol" class="IconSelectable t4" onclick="selectUnit(this, t4)"></input>
+        <input type="image" src="Icons/4 Cost/Brand-Icon.png" alt="Select Brand" class="IconSelectable t4" onclick="selectUnit(this, t4)"></input>
+        <input type="image" src="Icons/4 Cost/Cho'Gath-Icon.png" alt="Select Cho'Gath" class="IconSelectable t4" onclick="selectUnit(this, t4)"></input>
+        <input type="image" src="Icons/4 Cost/Draven-Icon.png" alt="Select Draven" class="IconSelectable t4" onclick="selectUnit(this, t4)"></input>
+        <input type="image" src="Icons/4 Cost/Gnar-Icon.png" alt="Select Gnar" class="IconSelectable t4" onclick="selectUnit(this, t4)"></input>
+        <input type="image" src="Icons/4 Cost/Kindred-Icon.png" alt="Select Kindred" class="IconSelectable t4" onclick="selectUnit(this, t4)"></input>
+        <input type="image" src="Icons/4 Cost/Leona-Icon.png" alt="Select Leona" class="IconSelectable t4" onclick="selectUnit(this, t4)"></input>
+        <input type="image" src="Icons/4 Cost/Sejuani-Icon.png" alt="Select Sejuani" class="IconSelectable t4" onclick="selectUnit(this, t4)"></input>
+        <input type="image" src="Icons/4 Cost/Jinx-Icon.png" alt="Select Jinx" class="IconSelectable t4" onclick="selectUnit(this, t4)"></input>
+      </div>
     </div>
 
     <div id="t5container" class="leftcontainer">
-      <p class="title costlabel">5 Cost Units</p>
+      <h2 class="title costlabel">5 Cost Units</h2>
       <p class="iconborder">
-        <img src="Icons\5 Cost\Yasuo-Icon.png" class="IconSelectable t5" onclick="selectUnit(this, t5)">
-        <img src="Icons\5 Cost\Karthus-Icon.png" class="IconSelectable t5" onclick="selectUnit(this, t5)">
-        <img src="Icons\5 Cost\Anivia-Icon.png" class="IconSelectable t5" onclick="selectUnit(this, t5)">
-        <img src="Icons\5 Cost\Kayle-Icon.png" class="IconSelectable t5" onclick="selectUnit(this, t5)">
-        <img src="Icons\5 Cost\Miss-Fortune-Icon.png" class="IconSelectable t5" onclick="selectUnit(this, t5)">
-        <img src="Icons\5 Cost\Swain-Icon.png" class="IconSelectable t5" onclick="selectUnit(this, t5)">
-        <img src="Icons\5 Cost\Pantheon-Icon.png" class="IconSelectable t5" onclick="selectUnit(this, t5)">
-        <img src="Icons\5 Cost\Kaisa-Icon.png" class="IconSelectable t5" onclick="selectUnit(this, t5)">
+        <input type="image" src="Icons/5 Cost/Yasuo-Icon.png" alt="Select Yasuo" class="IconSelectable t5" onclick="selectUnit(this, t5)"></input>
+        <input type="image" src="Icons/5 Cost/Karthus-Icon.png" alt="Select Karthus" class="IconSelectable t5" onclick="selectUnit(this, t5)"></input>
+        <input type="image" src="Icons/5 Cost/Anivia-Icon.png" alt="Select Anivia" class="IconSelectable t5" onclick="selectUnit(this, t5)"></input>
+        <input type="image" src="Icons/5 Cost/Kayle-Icon.png" alt="Select Kayle" class="IconSelectable t5" onclick="selectUnit(this, t5)"></input>
+        <input type="image" src="Icons/5 Cost/Miss-Fortune-Icon.png" alt="Select Miss Fortune" class="IconSelectable t5" onclick="selectUnit(this, t5)"></input>
+        <input type="image" src="Icons/5 Cost/Swain-Icon.png" alt="Select Swain" class="IconSelectable t5" onclick="selectUnit(this, t5)"></input>
+        <input type="image" src="Icons/5 Cost/Pantheon-Icon.png" alt="Select Pantheon" class="IconSelectable t5" onclick="selectUnit(this, t5)"></input>
+        <input type="image" src="Icons/5 Cost/Kaisa-Icon.png" alt="Select Kaisa" class="IconSelectable t5" onclick="selectUnit(this, t5)"></input>
       </p>
     </div>
 
     <div id="separator"></div>
 
     <div class="rightcolumn">
-      <p class="title" style="font-size: 16px; display: inline-block">Your Level:</p>
+      <h2 class="visually-hidden">Select Level</h2>
+      <label class="title" for="level" style="font-size: 16px; display: inline-block">Select Level:</label>
       <select id="level" onchange="setLevel()" style="width: auto">
         <option>1</option>
         <option>2</option>
@@ -175,8 +185,9 @@
         <option>8</option>
         <option>9</option>
       </select>
-    <div style="color:white; font-size: 100px; font-family: 'copse', sans-serif; padding-top: 22.5vh" id="output">0%</div>
-    <div class="title">Chance to Hit</div>
+      <h2 class="visually-hidden">Chance to Hit</h2>
+      <div style="color:white; font-size: 100px; font-family: 'copse', sans-serif; padding-top: 22.5vh" id="output">0%</div>
+      <div aria-hidden="true" class="title">Chance to Hit</div>
     </div>
 
   </body>
@@ -212,11 +223,14 @@
     var t5 = {types:8, total:10, hits: 0};
 
     function selectUnit(a, b) {
+      const alt = a.getAttribute("alt");
       if (a.style.filter == "grayscale(0%)") {
         a.setAttribute("style", "");
+        a.setAttribute("alt", "Select " + alt.substring(alt.indexOf(" ") + 1));
         b.hits -= 1;
       } else {
         a.setAttribute("style", "filter: grayscale(0%); border-color: #ae914b; border-style: solid; border-width: 1px");
+        a.setAttribute("alt", "Deselect " + alt.substring(alt.indexOf(" ") + 1));
         b.hits += 1;
       }
       setLevel();
